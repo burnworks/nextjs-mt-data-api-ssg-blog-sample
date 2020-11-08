@@ -1,0 +1,25 @@
+.title {
+  margin: 2rem 0;
+}
+
+.title h2 {
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.excerpt {
+  margin: 2rem 0;
+}
+
+.entryBody {
+  margin: 2rem 0;
+}
+
+.backHome {
+  margin: 2rem 0;
+}
+
+.backHome svg {
+  margin-right: 0.5em;
+}

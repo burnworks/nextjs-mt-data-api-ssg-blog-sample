@@ -1,0 +1,134 @@
+@import "normalize.css";
+
+body {
+  background: #f4f7f6;
+  color: #111;
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans", "BIZ UDPGothic", Meiryo, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-kerning: none;
+}
+
+:lang(en) {
+  font-kerning: normal;
+}
+
+a {
+  color: #b71c1c;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #555;
+  text-decoration: underline;
+}
+
+a:hover,
+a:active {
+  color: #e53935;
+  text-decoration: underline;
+}
+
+a:hover img {
+  opacity: 0.75;
+}
+
+a:hover,
+a:focus {
+  transition-property: color, background-color;
+  transition-duration: 0.1s, 0.4s;
+}
+
+a:hover img {
+  transition-property: opacity;
+  transition-duration: 0.4s;
+}
+
+a img {
+  border: none;
+  transition-property: opacity;
+  transition-duration: 0.2s;
+}
+
+iframe {
+  border: none;
+}
+
+img {
+  vertical-align: bottom;
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+textarea,
+button {
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+legend {
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+caption {
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+form fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+a:hover,
+button:hover {
+  cursor: pointer;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+table td,
+table th {
+  text-align: left;
+  vertical-align: top;
+}
+
+table th {
+  font-weight: normal;
+}
+
+[aria-hidden="true"] {
+  speak: none;
+}
+
+@media (min-height: 480px) {
+  .isSticky {
+    position: sticky;
+    top: 0;
+    box-shadow: 2px 0 16px rgba(20, 21, 23, 0.2);
+    z-index: 1000;
+  }
+}
