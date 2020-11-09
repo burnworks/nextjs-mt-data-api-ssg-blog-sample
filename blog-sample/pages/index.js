@@ -21,7 +21,7 @@ const Blog = (posts) => {
             title="トップページ"
             description="サンプルブログのトップページです。"
             url="https://example.com/"
-            image="/img/ogp.png"
+            image="https://example.com/img/ogp.png"
             type="website"
         >
             <div className={styles.pageHeader}>
