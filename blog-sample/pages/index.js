@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Layout from '../components/Layout';
 import styles from '../styles/top.module.css';
 
-const ENDPOINT = process.env.NEXT_PUBLIC_MT_ENDPOINT_URL
+const ENDPOINT = process.env.MT_ENDPOINT_URL
 
 export const getStaticProps = async () => {
     const res = await fetch(ENDPOINT)

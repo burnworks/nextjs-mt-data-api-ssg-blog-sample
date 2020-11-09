@@ -5,7 +5,7 @@ import styles from '../../styles/posts.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleLeft } from '@fortawesome/free-solid-svg-icons';
 
-const ENDPOINT = process.env.NEXT_PUBLIC_MT_ENDPOINT_URL
+const ENDPOINT = process.env.MT_ENDPOINT_URL
 
 export const getStaticPaths = async () => {
     const res = await fetch(ENDPOINT)
