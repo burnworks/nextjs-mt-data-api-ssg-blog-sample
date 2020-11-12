@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Layout from '../components/Layout';
 import styles from '../styles/top.module.css';
-import { getAllPosts } from '../lib/api'
+import { getAllPosts } from '../lib/api';
 
 export const getStaticProps = async () => {
     const allPosts = await getAllPosts()
