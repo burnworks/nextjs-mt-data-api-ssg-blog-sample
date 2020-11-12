@@ -24,7 +24,7 @@ const fetchAllPosts = () => {
     return fetchAPI(`?${param}`)
 }
 
-export async function getAllPosts() {
+export const getAllPosts = async () => {
     const data = await fetchAllPosts()
     return data
 }
