@@ -2,7 +2,15 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+First, copy the .env.local.example file in this directory to .env.local (which will be ignored by Git):
+
+```bash
+cp .env.local.example .env.local
+```
+
+- `MT_ENDPOINT_URL` set your Movable Type Data API endpoint URL
+
+Next, run the development server:
 
 ```bash
 npm run dev
