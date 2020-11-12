@@ -2,15 +2,13 @@ import React from 'react';
 import Link from 'next/link';
 import Layout from '../components/Layout';
 import styles from '../styles/top.module.css';
-
-const ENDPOINT = process.env.MT_ENDPOINT_URL
+import { getAllPosts } from '../lib/api'
 
 export const getStaticProps = async () => {
-    const res = await fetch(ENDPOINT)
-    const json = await res.json()
+    const allPosts = await getAllPosts()
     return {
         props: {
-            posts: json.items
+            posts: allPosts.items
         }
     }
 }

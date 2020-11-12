@@ -1,17 +1,15 @@
 import Link from 'next/link';
 import Layout from '../../components/Layout';
 import styles from '../../styles/posts.module.css';
+import { getAllPosts } from '../../lib/api';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleLeft } from '@fortawesome/free-solid-svg-icons';
 
-const ENDPOINT = process.env.MT_ENDPOINT_URL
-
 export const getStaticPaths = async () => {
-    const res = await fetch(ENDPOINT)
-    const json = await res.json()
+    const allPosts = await getAllPosts()
     return {
-        paths: json.items.map(post => ({
+        paths: allPosts.items.map(post => ({
             params: {
                 slug: post.basename
             }
@@ -21,10 +19,9 @@ export const getStaticPaths = async () => {
 }
 
 export const getStaticProps = async ({ params }) => {
+    const allPosts = await getAllPosts()
     const slug = params.slug
-    const res = await fetch(ENDPOINT)
-    const json = await res.json()
-    const result = json.items.find((v) => v.basename === slug)
+    const result = allPosts.items.find((v) => v.basename === slug)
     return {
         props: {
             post: result
