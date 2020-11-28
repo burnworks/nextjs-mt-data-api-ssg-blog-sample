@@ -2,7 +2,6 @@
   "name": "blog-sample",
   "version": "0.1.0",
   "private": true,
-  "homepage": "./",
   "scripts": {
     "dev": "next dev",
     "build": "next build && next export",
@@ -16,8 +15,8 @@
     "@fortawesome/fontawesome-free": "^5.15.1",
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
     "@fortawesome/free-solid-svg-icons": "^5.15.1",
-    "@fortawesome/react-fontawesome": "^0.1.12",
-    "next": "10.0.1",
+    "@fortawesome/react-fontawesome": "^0.1.13",
+    "next": "10.0.3",
     "react": "17.0.1",
     "react-dom": "17.0.1"
   }
