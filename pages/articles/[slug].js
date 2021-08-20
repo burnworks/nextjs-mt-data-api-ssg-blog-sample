@@ -1,15 +1,15 @@
-import Link from 'next/link';
-import Layout from '../../components/Layout';
-import styles from '../../styles/posts.module.css';
-import { getAllPosts } from '../../lib/api';
+import Link from 'next/link'
+import Layout from '../../components/Layout'
+import styles from '../../styles/posts.module.css'
+import { getAllPosts } from '../../lib/api'
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleLeft } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faAngleLeft } from '@fortawesome/free-solid-svg-icons'
 
 export const getStaticPaths = async () => {
     const allPosts = await getAllPosts()
     return {
-        paths: allPosts.items.map(post => ({
+        paths: allPosts.items.map((post) => ({
             params: {
                 slug: post.basename
             }

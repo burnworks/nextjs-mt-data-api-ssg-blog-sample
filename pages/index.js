@@ -1,7 +1,7 @@
-import Link from 'next/link';
-import Layout from '../components/Layout';
-import styles from '../styles/top.module.css';
-import { getAllPosts } from '../lib/api';
+import Link from 'next/link'
+import Layout from '../components/Layout'
+import styles from '../styles/top.module.css'
+import { getAllPosts } from '../lib/api'
 
 export const getStaticProps = async () => {
     const allPosts = await getAllPosts()
@@ -26,7 +26,7 @@ const Blog = (posts) => {
             </div>
             <div className={styles.articleList}>
                 <ul>
-                    {posts.posts.map(post => (
+                    {posts.posts.map((post) => (
                         <li key={post.id}>
                             <Link href={`/articles/${post.basename}`}>
                                 {post.title}
@@ -38,5 +38,4 @@ const Blog = (posts) => {
         </Layout>
     )
 }
-
 export default Blog
