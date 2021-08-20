@@ -1,33 +1,33 @@
-import React, { useEffect } from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
+import React, { useEffect } from 'react'
+import Head from 'next/head'
+import Link from 'next/link'
 
-import styles from '../styles/layout.module.css';
+import styles from '../styles/layout.module.css'
 
 const Layout = (props) => {
 
     const { title, description, url, image, type, children } = props
     const siteTitle = 'サンプルブログ'
 
-    const [isSticky, setIsSticky] = React.useState(false);
+    const [isSticky, setIsSticky] = React.useState(false)
     useEffect(() => {
         const scrollAction = () => {
             if (150 > window.scrollY) {
-                setIsSticky(true);
+                setIsSticky(true)
             } else {
-                setIsSticky(false);
+                setIsSticky(false)
             }
         };
         document.addEventListener('scroll', scrollAction, {
             capture: false,
             passive: true,
         });
-        scrollAction();
+        scrollAction()
 
         return () => {
-            document.removeEventListener('scroll', scrollAction);
-        };
-    }, []);
+            document.removeEventListener('scroll', scrollAction)
+        }
+    }, [])
 
     return (
         <div className={styles.container}>
