@@ -22,4 +22,7 @@
 
 .backHome svg {
   margin-right: 0.5em;
+  width: 0.875rem;
+  height: auto;
+  vertical-align: middle;
 }
